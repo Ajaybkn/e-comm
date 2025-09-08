@@ -67,7 +67,10 @@ export default function Admin() {
 		<div className="space-y-6">
 			<div className="flex items-center justify-between">
 				<h1 className="text-xl font-semibold">Admin</h1>
-				<button onClick={openCreate} className="px-4 py-2 rounded-md bg-neutral-900 text-white hover:bg-neutral-800">
+				<button
+					onClick={openCreate}
+					className="px-4 py-2 cursor-pointer rounded-md bg-neutral-900 text-white hover:bg-neutral-800"
+				>
 					+ Add product
 				</button>
 			</div>

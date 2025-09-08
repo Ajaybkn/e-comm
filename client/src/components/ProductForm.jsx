@@ -73,7 +73,7 @@ export default function ProductForm({ initial, onSubmit, submitLabel = "Save" })
 			</div>
 			<button
 				disabled={loading}
-				className="px-4 py-2 rounded-md bg-neutral-900 text-white hover:bg-neutral-800 disabled:opacity-50"
+				className="px-4 py-2 rounded-md bg-neutral-900 text-white hover:bg-neutral-800 disabled:opacity-50 cursor-pointer"
 			>
 				{loading ? "Please wait…" : submitLabel}
 			</button>

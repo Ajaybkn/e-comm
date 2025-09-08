@@ -34,7 +34,7 @@ export default function Nav({ user, onLogout }) {
 							</span>
 							<button
 								onClick={onLogout}
-								className="px-3 py-1.5 rounded-md text-sm font-medium bg-red-600 text-white hover:bg-red-700"
+								className="px-3 py-1.5 cursor-pointer rounded-md text-sm font-medium bg-red-600 text-white hover:bg-red-700"
 							>
 								Logout
 							</button>

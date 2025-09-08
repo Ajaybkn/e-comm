@@ -26,13 +26,13 @@ export default function ProductList({ items = [], onEdit, onDelete, isAdmin }) {
 						<div className="mt-3 flex gap-2">
 							<button
 								onClick={() => onEdit(p)}
-								className="px-3 py-1.5 text-sm rounded-md bg-blue-600 text-white hover:bg-blue-700"
+								className="px-3 py-1.5 cursor-pointer  text-sm rounded-md bg-blue-600 text-white hover:bg-blue-700"
 							>
 								Edit
 							</button>
 							<button
 								onClick={() => onDelete(p)}
-								className="px-3 py-1.5 text-sm rounded-md bg-red-600 text-white hover:bg-red-700"
+								className="px-3 py-1.5 text-sm cursor-pointer rounded-md bg-red-600 text-white hover:bg-red-700"
 							>
 								Delete
 							</button>
