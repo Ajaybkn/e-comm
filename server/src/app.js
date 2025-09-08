@@ -8,10 +8,10 @@ const productRoutes = require("./routes/products");
 
 const app = express();
 require("dotenv").config();
-console.log("JWT_SECRET:", process.env.JWT_SECRET);
-console.log("JWT_EXPIRES:", process.env.JWT_EXPIRES);
-console.log("NODE_ENV:", process.env.NODE_ENV);
-console.log("CORS_ORIGIN:", process.env.CORS_ORIGIN);
+// console.log("JWT_SECRET:", process.env.JWT_SECRET);
+// console.log("JWT_EXPIRES:", process.env.JWT_EXPIRES);
+// console.log("NODE_ENV:", process.env.NODE_ENV);
+// console.log("CORS_ORIGIN:", process.env.CORS_ORIGIN);
 
 app.use(cookieParser());
 app.use(express.json());
