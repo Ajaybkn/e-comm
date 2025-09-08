@@ -4,7 +4,15 @@ const jwt = require("jsonwebtoken");
 const { createUser, findByEmail } = require("../models/user");
 const auth = require("../middleware/auth");
 function setAuthCookie(res, payload) {
-	const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRES || "15m" });
+	const secret = process.env.JWT_SECRET;
+	const expiresIn = process.env.JWT_EXPIRES || "15m";
+
+	if (!secret) {
+		throw new Error("JWT_SECRET environment variable is not set");
+	}
+
+	const token = jwt.sign(payload, secret, { expiresIn });
+
 	res.cookie("accessToken", token, {
 		httpOnly: true,
 		secure: process.env.NODE_ENV === "production",
@@ -13,6 +21,7 @@ function setAuthCookie(res, payload) {
 		maxAge: 1000 * 60 * 15,
 	});
 }
+
 router.get("/me", auth, async (req, res) => {
 	res.json({ id: req.user.sub, email: req.user.email, role: req.user.role });
 });

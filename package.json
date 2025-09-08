@@ -4,8 +4,9 @@
   "type": "commonjs",
   "main": "src/index.js",
   "scripts": {
-    "dev": "nodemon src/index.js",
-    "start": "node src/index.js",
+    "dev": "node server/src/index.js",
+    "start": "node server/src/index.js",
+    "build": "npm install && npm install --prefix client && npm run build --prefix client",
     "migrate": "knex --knexfile ./knexfile.js migrate:latest",
     "seed": "knex --knexfile ./knexfile.js seed:run"
   },
