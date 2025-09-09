@@ -33,7 +33,7 @@ A minimal e-commerce admin demo with:
   - Use a specific origin for CORS in development (e.g., http://localhost:5173).
 - For production hosting without a persistent filesystem, use a managed database instead of SQLite.
 
-##Credentials
+## Credentials
 Admin Login - 
 email: "admin@example.com", password:Admin@123
 
